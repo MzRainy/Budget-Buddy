@@ -5,6 +5,8 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
+const whatever = "what";
+
 const sequelize = require('./config/connection');
 
 // TODO: Add a comment describing the functionality of this expression
