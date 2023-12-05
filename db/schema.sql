@@ -1,3 +1,2 @@
-DB_NAME='budgetBuddy_db'
-DB_USER='root'
-DB_PASSWORD='StarStream27#'
+DROP DATABASE IF EXISTS budgetbuddy_db;
+CREATE DATABASE budgetbuddy_db;
