@@ -27,15 +27,31 @@ const sess = {
   })
 };
 
+
+// Route to display static src images 
+app.get("/static", (req, res) => { 
+  res.render("static"); 
+}); 
+
+// Route to display dynamic src images 
+app.get("/dynamic", (req, res) => { 
+  imageList = []; 
+  imageList.push({ src: "Challenges/15Weekly-Challenge/Budget-Buddy/Images/2023-11-30_19-07-50.png", name: "personal budget" }); 
+  imageList.push({ src: "2023-11-30_19-09-12.png", name: "Linen" }); 
+  //imageList.push({ src: "icons/react.png", name: "react" }); 
+  res.render("dynamic", { imageList: imageList }); 
+});
+
 // Add a comment describing the functionality of this statement
 app.use(session(sess));
 
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars',exphbs({ defaultLayout: "main" }));
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static("images"));
 
 app.use(routes);
 
