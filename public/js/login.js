@@ -2,7 +2,7 @@ const loginFormHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
   
-document.querySelector('.login-form')
+document.querySelector('.login-form');
 document.addEventListener('submit', loginFormHandler);
   
   document.addEventListener('DOMContentLoaded', function() {
@@ -41,3 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   renderLoginForm();
 });
+})};
