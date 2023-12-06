@@ -1,28 +1,39 @@
 const loginFormHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
+  
+document.querySelector('.login-form')
+document.addEventListener('submit', loginFormHandler);
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const contentDiv = document.getElementById('content');
+    const loginSource = document.getElementById('login-template').innerHTML;
+    const userSource = document.getElementById('user-template').innerHTML;
 
-  // Gather the data from the form elements on the page
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+    const loginTemplate = Handlebars.compile(loginSource);
+    const userTemplate = Handlebars.compile(userSource);
 
-  if (email && password) {
-    // Send the e-mail and password to the server
-    const response = await fetch('/api/users/login', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+    function renderLoginForm() {
+      contentDiv.innerHTML = loginTemplate();
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    if (response.ok) {
-      document.location.replace('/');
-      alert("you have logged in! ");
-    } else {
-      alert('Failed to log in');
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username === 'user' && password === 'password') {
+          const userData = {
+            username: username,
+            email: 'example@example.com'
+          };
+          renderUserInfo(userData);
+        } else {
+          contentDiv.innerHTML += '<p>Invalid credentials. Please try again.<p>'
+        }
+      });
     }
-  }
-};
-
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+    function renderUserInfo(userData) {
+      contentDiv.innerHTML = userTemplate(userData);
+    }
+    renderLoginForm();
+  });
