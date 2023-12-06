@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
           username: username,
           email: 'example@example.com'
         };
+        function renderUserInfo(userData) {
+          contentDiv.innerHTML = userTemplate(userData);
+        }
         renderUserInfo(userData);
       } else {
-        contentDiv.innerHTML += 'Invalid credentials. Please try again.';
+        contentDiv.innerHTML += '<p>Invalid credentials. Please try again.<p>';
       }
     });
-  }
-  function renderUserInfo(userData) {
-    contentDiv.innerHTML = userTemplate(userData);
   }
   renderLoginForm();
 });
