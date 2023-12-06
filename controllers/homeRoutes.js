@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 router.get('/form', async (req, res) => {
   try { 
     res.render('form');
@@ -19,6 +20,15 @@ router.get('/form', async (req, res) => {
     res.status(500).json(err);
   }
 });
+=======
+router.get('/signup', async (req, res) => {
+  try{
+    res.render('signUp');
+  } catch(err) {
+    res.status(500).json(err);
+  }
+})
+>>>>>>> edb5535553736a2d6a3af3326e99a6b95e73fdb0
 
 // router.get('/', withAuth, async (req, res) => {
 //   try {
