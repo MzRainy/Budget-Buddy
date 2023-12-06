@@ -31,14 +31,14 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-// router.get('/login', (req, res) => {
-//   // TODO: Add a comment describing the functionality of this if statement
-//   if (req.session.logged_in) {
-//     res.redirect('/');
-//     return;
-//   }
+router.get('/login', (req, res) => {
+  // TODO: Add a comment describing the functionality of this if statement
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
 
-//   res.render('login');
-// });
+  res.render('login');
+});
 
 module.exports = router;
