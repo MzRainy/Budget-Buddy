@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
+router.get('/form', async (req, res) => {
   try { 
     res.render('form');
   } catch(err) {
