@@ -132,4 +132,8 @@ dist
 .node_modules
 .env
 .DS_Store
+<<<<<<< HEAD
 
+=======
+.package-lock.json
+>>>>>>> a6ea8e9cba27892ef5e5ce91c7eb013681be4999
