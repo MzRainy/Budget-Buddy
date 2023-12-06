@@ -1,6 +1,14 @@
-
-document.querySelector('.login-form');
+const loginFormHandler = async (event) => {
+  // Stop the browser from submitting the form so we can do so with JavaScript
+  event.preventDefault();
+  
+document.querySelector('.login-form')
 document.addEventListener('submit', loginFormHandler);
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const contentDiv = document.getElementById('content');
+    const loginSource = document.getElementById('login-template').innerHTML;
+    const userSource = document.getElementById('user-template').innerHTML;
 
 document.addEventListener('DOMContentLoaded', function() {
   const contentDiv = document.getElementById('content');
