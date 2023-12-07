@@ -8,7 +8,7 @@ const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
 
-// Add a comment describing the functionality of this expression
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -16,15 +16,15 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({ helpers });
 
-// Add a comment describing the functionality of this object
+
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 
@@ -45,7 +45,8 @@ app.get("/dynamic", (req, res) => {
 // Add a comment describing the functionality of this statement
 app.use(session(sess));
 
-app.engine('handlebars',exphbs({ defaultLayout: "main" }));
+//app.engine('handlebars',exphbs({ defaultLayout: "main" }));
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
