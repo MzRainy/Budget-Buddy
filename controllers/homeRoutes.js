@@ -20,14 +20,33 @@ router.get('/form', withAuth, async (req, res) => {
   }
 });
 
-//route to sign up page
-router.get('/signUp', async (req, res) => {
-  try {
-    res.render('signUp');
+<<<<<<< HEAD
+<<<<<<< HEAD
+router.get('/form', async (req, res) => {
+  try { 
+    res.render('form');
   } catch(err) {
     res.status(500).json(err);
   }
 });
+=======
+router.get('/signup', async (req, res) => {
+  try{
+=======
+//route to sign up page
+router.get('/signUp', async (req, res) => {
+  try {
+>>>>>>> 4c9fb0e9b211baccf3ba8e6bc27498116244270c
+    res.render('signUp');
+  } catch(err) {
+    res.status(500).json(err);
+  }
+<<<<<<< HEAD
+})
+>>>>>>> edb5535553736a2d6a3af3326e99a6b95e73fdb0
+=======
+});
+>>>>>>> 4c9fb0e9b211baccf3ba8e6bc27498116244270c
 
 
 //route to login page

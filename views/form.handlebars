@@ -1,7 +1,3 @@
-<br>
-<br>
-<br>
-
 <div class="form-container position-relative shadow">
   <form action="{{#if isEditMode}}/expenses/edit/{{record._id}}?_method=PUT{{else}}/expenses/new{{/if}}" method="post"
     class="needs-validation" novalidate>
@@ -39,15 +35,15 @@
       </div>
     </div>
     <div class="form-group row ml-1 mr-4 justify-content-end">
-      <label for="category" class="col-2 col-form-label">Category</label>
+      <label for="category" class="col-2 col-form-label">Category*</label>
       <select name="category" id="category" class="col-10 custom-select text-secondary" required>
         <option value="" selected>Categories</option>
-        {{!-- <option value="Household" {{isSelected record.category "Household"}}>Household</option>
+        <option value="Household" {{isSelected record.category "Household"}}>Household</option>
         <option value="Transportation" {{isSelected record.category "Transportation"}}>Transportation</option>
         <option value="Entertainment" {{isSelected record.category "Entertainment"}}>Entertainment</option>
         <option value="Eating Out"{{isSelected record.category "Eating Out"}}> Eating Out </option>
         <option value="Other" {{isSelected record.category "Other"}}>Other</option>
-      </select> --}}
+      </select>
       <div class="valid-feedback col-10 p-0">
         The format is correct!
       </div>
