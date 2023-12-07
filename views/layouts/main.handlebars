@@ -17,54 +17,71 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
   <div class="container">
-    <a class="navbar-brand text-center" href="#">Budget Buddy</a>
+    <a class="navbar-brand text-center" href="/">Budget Buddy</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="/">Home</a>
         </li>
         
         <li class="nav-item">
-          {{#if logged_in}}
-          <a class="nav-link" href="#">Logout</a>
+          {{#if isLoggedIn}}
+          <a id="logoutBtn"class="nav-link" href="">Logout</a>
           {{else}}
-           <a class="nav-link" href="#">Login</a>
-           {{/if}}
+          <a class="nav-link btn-light" href="/login">Login</a>
+          {{/if}}
         </li>
         
-        <li class="nav-item">
+        {{!-- <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Mock</a>
-        </li>
+        </li> --}}
       </ul>
     </div>
   </div>
 </nav>
   </header>
-    
-    
-    <!--Add a comment describing the functionality of this helper -->
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
   
   <main class="container container-fluid mt-5">
    {{{body}}}
+   
   </main>
-  <footer>
-      {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  </footer>
+ 
 
  
 </body>
-
+<footer>
+  <div class="card-group fixed-bottom">
+  <div class="card">
+    
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+   
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</footer>
 </html>
+<script src="/js/logout.js"></script>
