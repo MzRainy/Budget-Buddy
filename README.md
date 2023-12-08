@@ -52,6 +52,9 @@ SOFTWARE.
 
 ## Questions
 
-Check out my [GitHub](https://github.com/MzRainy/Budget-Buddy)!
+Check out [Nicholas' GitHub](https://github.com/DamascusKraken)
+Check out [Irania's GitHub](https://github.com/MzRainy)
+Check out [Cristian's GitHub](https://github.com/Cbaca4)
+
 
 Any questions regarding this project can be sent to IQ@gmail.com.
