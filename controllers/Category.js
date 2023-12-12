@@ -28,7 +28,7 @@ const CATEGORY_ICON = {
   Household: 'fa-solid fa-house',
   Transportation: 'fa-solid fa-van-shuttle',
   Entertainment: 'fa-solid fa-face-grin-beam',
-  Eating Out: 'fa-solid fa-utensils',
+  EatingOut: 'fa-solid fa-utensils',
   Other: 'fa-solid fa-pen',
 };
 
