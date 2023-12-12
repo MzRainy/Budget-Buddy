@@ -3,6 +3,8 @@ const withAuth = (req, res, next) => {
     res.redirect('/login');
   } else {
     res.locals.isLoggedIn = true;
+    
+    
     next();
   }
 };
