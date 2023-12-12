@@ -16,7 +16,7 @@ const signupFormHandler = async (event) => {
         document.location.replace('/');
         alert('you did it');
       } else {
-        alert('Failed to sign up.');
+        // alert('Failed to sign up.');
       }
     }
   };
