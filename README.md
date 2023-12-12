@@ -22,7 +22,7 @@ This application helps users track spending
 
 ## Contribute
 
-If you have any additional information on the Budget Buddy please feel free to reach out to us via  [GitHub](https://github.com/MzRainy/Budget-Buddy).
+If you have any additional information on the Budget Buddy please feel free to reach out to us via  [GitHub](https://github.com/MzRainy/Employee_Tracker). 
 Any additions will be reviewed before being implemented.
 
 
@@ -52,9 +52,6 @@ SOFTWARE.
 
 ## Questions
 
-Check out [Nicholas' GitHub](https://github.com/DamascusKraken)
-Check out [Irania's GitHub](https://github.com/MzRainy)
-Check out [Cristian's GitHub](https://github.com/Cbaca4)
-
+Check out my [GitHub](https://github.com/MzRainy/Employee_Tracker)!
 
 Any questions regarding this project can be sent to IQ@gmail.com.
