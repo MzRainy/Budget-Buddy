@@ -1,5 +1,3 @@
-//DON'T DELETE
-
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
@@ -17,27 +15,22 @@ User.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
+    }, 
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      // Only allow alphanumeric characters
-      validate: {
-        isAlphanumeric: true,
-      },
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
+      primaryKey: true,
       validate: {
         isEmail: true,
       },
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      //Must be longer than 8 characters
       validate: {
         len: [8],
       },
