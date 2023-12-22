@@ -16,4 +16,5 @@ const getUserBudget = async (event) => {
     }
     
 }
-
+loginBtn.addEventListener("click", loginDirect);
+signUpBtn.addEventListener("click", signUpDirect);
